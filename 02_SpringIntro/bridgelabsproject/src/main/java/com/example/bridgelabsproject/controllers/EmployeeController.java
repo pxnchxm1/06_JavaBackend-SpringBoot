@@ -17,6 +17,7 @@ public class EmployeeController {
 
     @GetMapping("/")
     public List<EmployeeModel> getEmployees(){
+
         return es.getAllEmployees();
     }
     @GetMapping("/{empId}")
@@ -31,6 +32,7 @@ public class EmployeeController {
 
     @PutMapping("/{id}")
     public void updateEmployee(@PathVariable int id, @RequestBody EmployeeModel emp) {
+
         es.updateEmployeeById(id,emp);
     }
 
